@@ -14,6 +14,11 @@ start.addEventListener("click",function(){
         return;
     }
 
+    if(inputValue < 0){
+        alert("Please set a valid time");
+        return;
+    }
+
     alert(`${inputValue} seconds timer starting now, will end after ${inputValue} seconds if not ended before that.`);
 
     input.value = '';
