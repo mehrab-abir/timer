@@ -8,6 +8,7 @@ start.addEventListener("click",function(){
     const input = document.getElementById("input");
     let inputValue = Number(input.value);
     showTimer.innerText = inputValue;
+    showTimer.style.color = "#ffffff";
     
     if(input.value === '' || inputValue === 0){
         alert("Please set a time");
@@ -16,6 +17,8 @@ start.addEventListener("click",function(){
 
     if(inputValue < 0){
         alert("Please set a valid time");
+        input.value = '';
+        showTimer.innerText = 0;
         return;
     }
 
