@@ -8,9 +8,15 @@ start.addEventListener("click",function(){
     const input = document.getElementById("input");
     let inputValue = Number(input.value);
     showTimer.innerText = inputValue;
-    input.value = '';
+    
+    if(input.value === '' || inputValue === 0){
+        alert("Please set a time");
+        return;
+    }
 
     alert(`${inputValue} seconds timer starting now, will end after ${inputValue} seconds if not ended before that.`);
+
+    input.value = '';
 
     intervalID = setInterval(function(){
         inputValue--;
